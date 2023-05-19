@@ -8,6 +8,7 @@ export const LoginPage = () => {
       className="w-1/4 h-60 mx-auto mt-40"
     >
       <h1 className="text-lg text-white text-center">Sign in to MERN Blog</h1>
+      
       <label className="text-xs text-gray-400">
         Username:
         <input
