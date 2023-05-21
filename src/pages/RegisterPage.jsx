@@ -1,9 +1,24 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import {registerUser} from '../redux/features/auth/authSlice.js'
+
 
 export const RegisterPage = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const dispatch = useDispatch()
+
+  const handleSabmit =()=>{
+    try {
+      dispatch(registerUser({username, password}))
+      setPassword('') //clean form
+      setUsername('') //clean form
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
 
   useEffect(()=>{
     
@@ -42,6 +57,7 @@ export const RegisterPage = () => {
     <div className="flex gap-8 justify-center mt-4">
       <button
         type="submit"
+        onClick={()=>handleSabmit()}
         className="flex bg-gray-600 justify-center items-center text-xs text-white rounded-sm py-2 px-4"
       >
         Create account
