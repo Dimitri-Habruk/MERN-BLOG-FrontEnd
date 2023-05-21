@@ -29,6 +29,10 @@ export const LoginPage = () => {
         />
       </label>
 
+      <div>
+        <p className="text-center text-gray-400 text-xs">forgot password ?</p>
+      </div>
+
       <div className="flex gap-8 justify-center mt-4">
         <button
           type="submit"
