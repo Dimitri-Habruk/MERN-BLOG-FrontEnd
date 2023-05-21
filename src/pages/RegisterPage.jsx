@@ -12,7 +12,7 @@ export const RegisterPage = () => {
   
   const {status} =useSelector(state=>state.auth)
 
-  const handleSabmit =()=>{
+  const handleSubmit =()=>{
     try {
       dispatch(registerUser({username, password}))
       setPassword('') //clean form
@@ -27,7 +27,6 @@ export const RegisterPage = () => {
     if(status){
       toast(status)
     }
-    console.log(username, password,)
   },[status])
 
   return (
@@ -63,7 +62,7 @@ export const RegisterPage = () => {
     <div className="flex gap-8 justify-center mt-4">
       <button
         type="submit"
-        onClick={()=>handleSabmit()}
+        onClick={()=>handleSubmit()}
         className="flex bg-gray-600 justify-center items-center text-xs text-white rounded-sm py-2 px-4"
       >
         Create account
