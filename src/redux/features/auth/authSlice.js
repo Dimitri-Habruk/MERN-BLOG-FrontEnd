@@ -41,10 +41,12 @@ export const authSlice = createSlice({
             state.isLodaing = false
             state.status = action.payload.message
             state.user = action.payload.user
+            state.token = action.payload.token
 
         },
         [registerUser.rejected]: (state, action) => {
-
+            state.status = action.payload.message
+            state.isLodaing = false
         }
 
     }

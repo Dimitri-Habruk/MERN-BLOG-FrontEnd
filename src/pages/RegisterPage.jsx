@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
 
 export const RegisterPage = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  useEffect(()=>{
+    
+  })
+
   return (
     <form
     onSubmit={(e) => e.preventDefault()}
@@ -12,6 +19,8 @@ export const RegisterPage = () => {
       Username:
       <input
         type="text"
+        value={username}
+        onChange={(e)=>setUsername(e.target.value)}
         name="Username"
         placeholder="Username"
         className="mt-1 text-black w-full rounded-lg bg-gray-400 border py-1 px-2 text-xs outline-none placeholder:text-gray-700"
@@ -22,6 +31,8 @@ export const RegisterPage = () => {
       Password:
       <input
         type="text"
+        value={password}
+        onChange={(e)=>setPassword(e.target.value)}
         name="Password"
         placeholder="Password"
         className="mt-1 text-black w-full rounded-lg bg-gray-400 border py-1 px-2 text-xs outline-none placeholder:text-gray-700"
