@@ -18,9 +18,9 @@ function App() {
 
   const dispatch = useDispatch()
 
-  useEffect(()=>{
-    dispatch(getMe ())
-  },[])
+  // useEffect(()=>{
+  //   dispatch(getMe ())
+  // },[])
 
   return (
     <Layout>
