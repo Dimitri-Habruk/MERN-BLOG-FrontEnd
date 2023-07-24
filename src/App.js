@@ -20,8 +20,7 @@ function App() {
   const { status } = useSelector ((state) => state.auth);
 
   useEffect(()=>{
-    dispatch(getMe())
-    console.log(status)
+    // dispatch(getMe())
 
   },[])
 
